@@ -1,6 +1,6 @@
 This project is for streaming hostserver in Brazil ( http://streaming.hostserverdobrasil.com.br/ )
 
-## Available Scripts
+## How do run this project on development
 
 In the project directory, you can run:
 
