@@ -17,6 +17,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as Actions from './store/actions';
 import reducer from './store/reducers';
 
+import Video from './Video';
+
 
 const drawerWidth = 400;
 const headerHeight = 200;
@@ -29,73 +31,9 @@ const useStyles = makeStyles(theme => ({
 		position: 'relative',
 		flex: '1 1 auto',
 		height: 'auto',
-		backgroundColor: theme.palette.background.default
+		backgroundColor: theme.palette.background.default,
 	},
-	topBg: {
-		position: 'absolute',
-		left: 0,
-		right: 0,
-		top: 0,
-		height: headerHeight,
-		backgroundImage: 'url("../../assets/images/backgrounds/header-bg.png")',
-		backgroundColor: theme.palette.primary.dark,
-		backgroundSize: 'cover',
-		pointerEvents: 'none'
-	},
-	contentCardWrapper: {
-		position: 'relative',
-		padding: 24,
-		maxWidth: 1400,
-		display: 'flex',
-		flexDirection: 'column',
-		flex: '1 0 auto',
-		width: '100%',
-		minWidth: '0',
-		maxHeight: '100%',
-		margin: '0 auto',
-		[theme.breakpoints.down('sm')]: {
-			padding: 16
-		},
-		[theme.breakpoints.down('xs')]: {
-			padding: 12
-		}
-	},
-	contentCard: {
-		display: 'flex',
-		position: 'relative',
-		flex: '1 1 100%',
-		flexDirection: 'row',
-		backgroundImage: 'url("/assets/images/patterns/rain-grey.png")',
-		backgroundColor: theme.palette.background.paper,
-		boxShadow: theme.shadows[1],
-		borderRadius: 8,
-		minHeight: 0,
-		overflow: 'hidden'
-	},
-	drawerPaper: {
-		width: drawerWidth,
-		maxWidth: '100%',
-		overflow: 'hidden',
-		height: '100%',
-		[theme.breakpoints.up('md')]: {
-			position: 'relative'
-		}
-	},
-	contentWrapper: {
-		display: 'flex',
-		flexDirection: 'column',
-		flex: '1 1 100%',
-		zIndex: 10,
-		background: `linear-gradient(to bottom, ${fade(theme.palette.background.paper, 0.8)} 0,${fade(
-			theme.palette.background.paper,
-			0.6
-		)} 20%,${fade(theme.palette.background.paper, 0.8)})`
-	},
-	content: {
-		display: 'flex',
-		flex: '1 1 100%',
-		minHeight: 0
-	}
+	
 }));
 
 function StreamingApp(props) {
@@ -110,7 +48,7 @@ function StreamingApp(props) {
 
 	return (
 		<div className={clsx(classes.root)}>
-			
+			<Video />
 		</div>
 	);
 }
