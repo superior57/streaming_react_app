@@ -16,12 +16,15 @@ import AppContext from './AppContext';
 import { Auth } from './auth';
 import routes from './fuse-configs/routesConfig';
 import store from './store';
+import axios from 'axios';
 
 const jss = create({
 	...jssPreset(),
 	plugins: [...jssPreset().plugins, jssExtend(), rtl()],
 	insertionPoint: document.getElementById('jss-insertion-point')
 });
+
+axios.defaults.baseURL = "http://localhost:5000/";
 
 const generateClassName = createGenerateClassName();
 

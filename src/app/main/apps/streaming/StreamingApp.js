@@ -17,7 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as Actions from './store/actions';
 import reducer from './store/reducers';
 
-import Video from './Video';
+import Video from './video/Video';
 
 
 const drawerWidth = 400;
@@ -42,8 +42,8 @@ function StreamingApp(props) {
 	const classes = useStyles(props);
 
 	useEffect(() => {
-		dispatch(Actions.getUserData());
-		dispatch(Actions.getContacts());
+		// dispatch(Actions.getUserData());
+		// dispatch(Actions.getContacts());
 	}, [dispatch]);
 
 	return (
